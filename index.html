@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* 
+    value
+    name
+    */
+
+
+
+    input[value="Jonas"]{
+        background: red;
+    }
+
+    input{
+        border-radius: 50px;
+        padding: 8px;
+        border: 2px solid #000;
+        display: block;
+    }
+
+    textarea {
+        border-radius: 50px;
+        margin: 40px;
+    }
+
+    
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- "value" prefills textbox-->
+
+    <form action="">
+        <label for="name">Name: </label>
+        <input name="name" id="name" type="text">
+
+        <label for="signupform_email">Email: </label>
+        <input name="email" id="signupform_email" type="email">
+
+        <label>Age: 
+            <input name="age" type="number">
+        </label>
+
+        <label>Message: 
+            <textarea name="msg" id="" cols="30" rows="10"></textarea>
+        </label>
+
+        <input type="submit">
+    </form>
+
+
+    Now <input type= "radio" name="tag" value="now">
+    Tomorrow <input type= "radio" name="tag" value="Tomorrow">
+    Later <input type= "radio" name="tag" value="Later">
+    Too late <input type= "radio" name="tag" value="Too late">
+
+
+
+    <!--
+Greta's form
+   
+
+    <form action="">
+        <label for="name">Insert task name: </label>
+        <input name="task" id="task" type="text">
+        
+
+        <label>Insert task description: 
+            <textarea name="msg" id="" cols="30" rows="10"></textarea>
+        </label>
+
+        <input type="radio" name="relevancy" value="urgent"> Urgent
+        <input type="radio" name="relevancy" value="soon to do"> Soon to do
+        <input type="radio" name="relevancy" value="can wait"> Can wait
+
+        <input type="submit">
+    </form>
+
+     -->
+
+     <script>
+     const form = document.querySelector("form");
+    const name = document.querySelector("input[name='name']");
+
+
+     form.addEventListener("submit", (e)=>{
+         console.log("form submitted");
+         e.preventDefault();
+     })
+
+     name.addEventListener("input", e=>{
+         console.log(e.target.value);
+     })
+     </script>
+</body>
+</html>
